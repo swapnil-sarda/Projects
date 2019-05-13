@@ -43,8 +43,9 @@ df1 <- df1 %>%
 
 df1$Date <- strptime(as.character(df1$Date), "%Y-%m-%d")
 
-# Multiple date formats
-# df1$Date <- strptime(as.character(df1$Date), "%d-%m-%Y")
+# Correcting different date formats to use one
+
+df1$Date <- strptime(as.character(df1$Date), "%d-%m-%Y")
 
 df1$Date <- format(as.Date(df1$Date), "%d/%m/%Y")
 
