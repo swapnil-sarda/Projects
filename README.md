@@ -26,7 +26,7 @@ df1 <- read.xlsx("H:/Chrome Downloads/ADM/Project/Data files/PM 2.5/Jaipur.xlsx"
 
 colnames(df1) <- c("Date","Concentration")
 
-#### Exploratory analysis
+### Exploratory analysis
 
 plot_str(df1)
 
@@ -34,13 +34,13 @@ plot_missing(df1)
 
 plot_histogram(df1, nrow = 2L, ncol = 2L)
 
-# Dealing with outliers if present
+### Dealing with outliers if present
 
 OutVals = boxplot.stats(df1$Concentration)$out 
 
 df1 <- df1[!(df1 %in% OutVals )] 
 
-# Consistent data format
+### Consistent data format
 
 df1$Concentration <- as.numeric(df1$Concentration)
 
@@ -54,19 +54,19 @@ df1 <- df1 %>%
 
 df1$Date <- strptime(as.character(df1$Date), "%Y-%m-%d")
 
-# Correcting different date formats to use one
+### Correcting different date formats to use one
 
 df1$Date <- strptime(as.character(df1$Date), "%d-%m-%Y")
 
 df1$Date <- format(as.Date(df1$Date), "%d/%m/%Y")
 
-# Repalcing NA with 0
+### Repalcing NA with 0
 
 df2 <- cbind(df1)
 
 df2$Concentration[is.na(df2$Concentration)]<- 0
 
-# Train and test files
+### Train and test files
 
 df2.1 <- head(df2, -7)
 
@@ -76,7 +76,7 @@ write.xlsx2(df2.1, "City1.xlsx", row.names = FALSE)
 
 write.xlsx2(df2.2, "City2.xlsx", row.names = FALSE)
 
-# Replacing 0 with rolling average
+### Replacing 0 with rolling average
 
 df3 <- NA
 
@@ -84,7 +84,7 @@ df3 <- rollmean(df2$Concentration,7)
 
 df3 <- as.data.frame(unlist(df3))
 
-# Train and test files
+### Train and test files
 
 df3.1 <- head(df3,-7)
 
@@ -99,7 +99,7 @@ write.xlsx2(df3.1, "City3.xlsx", row.names = FALSE)
 write.xlsx2(df3.2, "City4.xlsx", row.names = FALSE)
 
 
-# Replacing 0 with average
+### Replacing 0 with average
 
 df4 <- c()
 
@@ -107,7 +107,7 @@ df4 <- unlist(as.numeric(na.aggregate(df2$Concentration)))
 
 df4 <- as.data.frame(unlist(df4))
 
-# Train and test files
+### Train and test files
 
 df4.1 <- head(df4, -7)
 
@@ -121,9 +121,7 @@ write.xlsx2(df4.2, "City6.xlsx", row.names = FALSE)
 
 # Machine learning model implementation in Python
 
-# Recurrent Neural Network
-
-# Part 1 - Data Preprocessing
+### Part 1 - Data Preprocessing
 
 import numpy as np
 
@@ -131,13 +129,13 @@ import matplotlib.pyplot as plt
 
 import pandas as pd
 
-# Importing the training set
+### Importing the training set
 
 dataset_train = pd.read_csv('F:\\ADM\\LSTM\\City1.csv')
 
 training_set = dataset_train.iloc[:, 2:3].values
 
-# Feature Scaling
+### Feature Scaling
 
 from sklearn.preprocessing import MinMaxScaler
 
@@ -145,7 +143,7 @@ sc = MinMaxScaler(feature_range = (0, 1))
 
 training_set_scaled = sc.fit_transform(training_set)
 
-# Creating a data structure with 60 timesteps and 1 output
+### Creating a data structure with 60 timesteps and 1 output
 
 X_train = []
 
@@ -157,12 +155,13 @@ for i in range(60, 574):
 
 X_train, y_train = np.array(X_train), np.array(y_train)
 
-# Reshaping
+### Reshaping
 X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))
 
-# Part 2 - Building the RNN
+### Part 2 - Building the RNN
 
-# Importing the Keras libraries and packages
+### Importing the Keras libraries and packages
+
 from keras.models import Sequential
 
 from keras.layers import Dense
@@ -171,49 +170,48 @@ from keras.layers import LSTM
 
 from keras.layers import Dropout
 
-# Initialising the RNN
+### Initialising the RNN
+
 regressor = Sequential()
 
-# Adding the first LSTM layer and some Dropout regularisation
+### Adding 4 LSTM layers and some Dropout regularisation at each step
 regressor.add(LSTM(units = 70, return_sequences = True, input_shape = (X_train.shape[1], 1)))
 
 regressor.add(Dropout(0.2))
 
-# Adding a second LSTM layer and some Dropout regularisation
+
 regressor.add(LSTM(units = 70, return_sequences = True))
 
 regressor.add(Dropout(0.2))
 
-# Adding a third LSTM layer and some Dropout regularisation
+
 regressor.add(LSTM(units = 70, return_sequences = True))
 
 regressor.add(Dropout(0.2))
 
-# Adding a fourth LSTM layer and some Dropout regularisation
+
 regressor.add(LSTM(units = 70))
 
 regressor.add(Dropout(0.2))
 
-# Adding the output layer
+### Adding the output layer
 regressor.add(Dense(units = 1))
 
-# Compiling the RNN
+### Compiling the RNN
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
-# Fitting the RNN to the Training set
+### Fitting the RNN to the Training set
 regressor.fit(X_train, y_train, epochs = 40, batch_size = 15)
 
 
-# Part 3 - Making the predictions and visualising the results
+### Part 3 - Making the predictions and visualising the results
 
-
-# Getting the real pollution data of last 7 days
+### Getting the real pollution data of last 7 days
 dataset_test = pd.read_csv('F:\\ADM\\LSTM\\City2.csv')
 
 real_data = dataset_test.iloc[:, 2:3].values
 
-
-# Getting the predicted value of last week pollution 
+### Getting the predicted value of last week pollution 
 dataset_total = pd.concat((dataset_train['Concentration'], dataset_test['CO']), axis = 0)
 
 inputs = dataset_total[len(dataset_total) - len(dataset_test) - 60:].values
@@ -252,7 +250,7 @@ plt.legend()
 plt.show()
 
 
-# Calculating RMSE to check model accuracy
+### Calculating RMSE to check model accuracy
 
 import math
 from sklearn.metrics import mean_squared_error
