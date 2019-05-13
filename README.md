@@ -236,7 +236,7 @@ predictedValue = regressor.predict(X_test)
 predictedValue = sc.inverse_transform(predictedValue)
 
 
-#### Visualising the results
+### Visualising the results
 plt.plot(real_data, color = 'red', label = 'Real Pollution Data')
 
 plt.plot(predictedValue, color = 'blue', label = 'Predicted value')
