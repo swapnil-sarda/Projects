@@ -6,9 +6,11 @@
 
 # Machine learning model implementation done in Python.
 
+# Data cleaning process in R
+
 ===========================================================================
 
-# Data cleaning process in R
+
 
 setwd("H:/Chrome Downloads/ADM/Project/Data files/PM 2.5")
 
