@@ -36,7 +36,7 @@ df1$Concentration <- as.numeric(df1$Concentration)
 df1$Date <- gsub(x = df1$Date, pattern = "00:00", replacement = " ")
 
 df1$Date <- ymd(df1$Date)
-
+ 
 df1 <- df1 %>%
   mutate(Date = as.Date(Date)) %>%
   complete(Date = seq.Date(min(Date), max(Date), by="day"))
