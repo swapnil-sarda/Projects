@@ -10,8 +10,6 @@
 
 ===========================================================================
 
-
-
 setwd("H:/Chrome Downloads/ADM/Project/Data files/PM 2.5")
 
 library(xlsx)
@@ -28,7 +26,7 @@ df1 <- read.xlsx("H:/Chrome Downloads/ADM/Project/Data files/PM 2.5/Jaipur.xlsx"
 
 colnames(df1) <- c("Date","Concentration")
 
-#Exploratory analysis
+## Exploratory analysis
 
 plot_str(df1)
 
