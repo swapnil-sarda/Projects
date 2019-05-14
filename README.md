@@ -4,6 +4,6 @@
 
 # [Data cleaning process done in R.](https://github.com/swapnil-sarda/projects/blob/Machine-learning/R%20Code)
 
-# [Machine learning model implementation done in Python].(https://github.com/swapnil-sarda/projects/blob/Machine-learning/Python%20code)
+# [Machine learning model implementation done in Python.](https://github.com/swapnil-sarda/projects/blob/Machine-learning/Python%20code)
 
  
