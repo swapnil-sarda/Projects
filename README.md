@@ -2,7 +2,7 @@
 
 ### [Machine learning](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
 
-Description: Predicting and comparing air pollution factor PM2.5 for 7 days using RNN.
+Description: Predicting and comparing air pollution factor PM2.5 for 7 days and 8 different cities of India using RNN.
 
 Tools Used: R, Python, Tableau, Excel.
 
