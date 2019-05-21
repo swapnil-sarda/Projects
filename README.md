@@ -1,8 +1,8 @@
 ## Description
 
-### Topic - Electric car sales in Norway.
+ Topic - Electric car sales in Norway.
 
-### For this module we were required to build a data warehouse, automate it and answer business queries
+ For this module we were required to build a data warehouse, automate it and answer business queries
 
 ### SSIS and SSAS was performed in visual studio along with SSMS for executing SQL queries and to create database, tables.
 
