@@ -1,4 +1,4 @@
-# Projects implemented in the duration of the course.
+# Projects
 
 ### [Machine learning](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
 
