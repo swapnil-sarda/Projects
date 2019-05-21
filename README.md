@@ -1,19 +1,9 @@
-# Projects
+# Description
 
-### [Machine learning](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
+The aim of this project is to analyse data and find business value.
 
-Description: Predicting and comparing air pollution factor PM2.5 for 7 days and 8 different cities of India using LSTM.
+A college has many facets which add to its value. One of the facet is the infrastructure faciliities available in the college. 
 
-Tools Used: R, Python, Tableau, Excel.
+Using the dataset of the college in India.
 
-### [Data Warehouse](https://github.com/swapnil-sarda/projects/tree/Data-warehouse)
-
-Description: Deploy an automated warehouse and answer non-trivial queries.
-
-Tools used: SQL, R, Visual studio, Tableau.
-
-### [Analytical CRM]()
-
-Description: To find correlation between variables and find business value.
-
-Tools used: Rstudio, SPSS
+This project was implemented in R.
