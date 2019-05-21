@@ -12,7 +12,7 @@
 
 ### Business queries were visualised in Tableau.
 
-[### Preprocessing of data done using R]()
+### [Preprocessing of data done using R](https://github.com/swapnil-sarda/projects/blob/Data-warehouse/R%20code%20for%20preprocessing)
 
 ### Sentiment analysis performed on tweets.
 
