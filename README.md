@@ -12,7 +12,7 @@ Description: Deploy an automated warehouse and answer non-trivial queries.
 
 Tools used: SQL, R, Visual studio, Tableau.
 
-### [Analytical CRM]()
+### [Analytical CRM](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
 
 Description: To find correlation between variables and find business value.
 
