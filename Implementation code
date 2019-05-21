@@ -1,1 +1,156 @@
+setwd("H:/Chrome Downloads/A-CRM/Project files/")
+
+library(readxl)
+library(sqldf)
+library(stringi)
+library(dplyr)
+
+df1 <- read.csv("Type of college.csv", header = TRUE, sep = ",")
+df2 <- read.csv("Infrastructure available.csv", header = TRUE, sep =",")
+df3 <- read.csv("Students enrolled.csv", header = TRUE, sep = ",")
+
+
+#Cleaning Dataframe 1
+
+colnames(df1)[9:14]<- c("Type","Management","College","Location","Womens university","Autonomous")
+df1$College <- gsub("\\(|Id\\:| C\\-|[0-9]+\\)","",df1$College)
+df1$College <- gsub("^<>*","",df1$College)
+df1$College<- stri_trans_totitle(df1$College)
+df1 <- df1[complete.cases(df1),]
+summary(df1)
+View(df1)
+
+#Cleaning Dataframe 2
+
+colnames(df2) <- c("College", "Playground", "Auditorium", "Theatre","Library","Laboratory", "Conference Hall", "Health Center", "Gymnasium Fitness Center", "Indoor Stadium", "Common Room", "Computer Center", "Cafeteria", "Guest House")
+df2$College <- gsub("\\(|Id\\:| C\\-|[0-9]+\\)","",df2$College)
+df2$College <- gsub("([0-9])","",df2$College)
+df2$College <- gsub("\\)|","",df2$College)
+df2$College <- gsub("^<>*()-+","",df2$College)
+df2$College<- stri_trans_totitle(df2$College)
+df2 <- cbind(df2, "Total Infrastructure facilities" = 0)
+View(df2)
+
+#Cleaning Dataframe 3
+str(df3)
+colnames(df3)[1]<-c("College")
+colnames(df3)[20]<-c("Total")
+df3 <- df3[complete.cases(df3),]
+df3<-df3[!grepl("(Id: U)",df3$College ),]
+df3<-df3[!grepl("(Id: S)",df3$College),]
+df3$College <- gsub("\\(|Id\\:| C\\-|[0-9]+\\)","",df3$College)
+df3$College <- gsub("([0-9])","",df3$College)
+df3$College <- stri_trans_totitle(df3$College)
+
+
+#Merging two dataframes on a common value
+
+#Merging dataset 1 and 2
+df4 <- sqldf("SELECT * from df2 JOIN df1 USING(College)")
+df4 <- df4[complete.cases(df4),]
+
+#Merging dataset (1,2) and 3
+df4 <- sqldf("SELECT * from df3 JOIN df4 USING(College)")
+df4 <- df4[complete.cases(df4),]
+
+str(df4)
+View(df4)
+
+rm(crmdf)
+
+#New dataframe with selected features
+
+crmdf <- data.frame(df4$College,df4$Total,df4$Type,df4$Management,df4$Location,df4$`Womens university`,df4$Autonomous,df4$Playground,df4$Auditorium,df4$Theatre,df4$Library,df4$Laboratory,df4$`Conference Hall`,df4$`Health Center`,df4$`Gymnasium Fitness Center`,df4$`Indoor Stadium`,df4$`Common Room`,df4$`Computer Center`,df4$Cafeteria,df4$`Guest House`,df4$State)
+colnames(crmdf) <- c("College","Total","Type","Management","Location","Womens university","Autonomous","Playground","Auditorium","Theatre","Library","Laboratory","Conference Hall","Health Center","Gymnasium Fitness Center","Indoor Stadium","Common Room","Computer Center","Cafeteria","Guest House","State")
+
+
+
+#No repeated college names
+crmdf <- unique(crmdf)
+View(crmdf)
+
+#Replacing Yes and No values with 2 and 1 respectively
+crmdf[3:20] <- lapply(crmdf[3:20], as.numeric)
+str(crmdf)
+
+#Finding outliers
+OutVals = boxplot.stats(crmdf$Total)$out
+
+#Removing outliers 
+#outliers <- crmdf[crmdf$Total %in% OutVals,]
+crmdf <- crmdf[!(crmdf %in% OutVals )]
+str(crmdf)
+
+#Correlation analysis ready dataset
+crmdf <- cbind(crmdf, "Total Infrastructure facilities" = 0)
+write.csv(crmdf,file = "CRM.csv", row.names = FALSE)
+
+
+crmdf2 <- crmdf[crmdf$Total > quantile(crmdf$Total, .25) - 1.5*IQR(crmdf$Total) & 
+          crmdf$Total < quantile(crmdf$Total, .75) + 1.5*IQR(crmdf$Total), ]
+
+#crmdf2 <- cbind(crmdf2, "Total Infrastructure facilities" = 0)
+View(crmdf2)
+write.csv(crmdf2,file = "CRM2.csv", row.names = FALSE)
+#idx = c(2)
+
+# rural <- crmdf2[crmdf2$Location %in% '1',]
+# rural <- rural[rural$State %in% 'Tamil Nadu',]
+# View(rural)
+# urban <- crmdf2[crmdf2$Location %in% '2',]
+# urban <- urban[urban$State %in% 'Karnataka',]
+# View(urban)
+# 
+# write.csv(rural,"Rural.csv",row.names = FALSE)
+# write.csv(urban,"Urban.csv",row.names = FALSE)
+
+
+
+
+#Correlation test: Chi square
+
+chisqmatrix <- function(x) {
+  names = colnames(x);  num = length(names)
+  m = matrix(nrow=num,ncol=num,dimnames=list(names,names))
+  for (i in 1:num) {
+    for (j in 1:num) {
+      m[i,j] = chisq.test(x[,i],x[,j],correct = TRUE,simulate.p.value = TRUE)$p.value
+    }
+  }
+  return (m)
+}
+
+
+#modelling dataframe for Chisquare test
+crmdf5 <- crmdf2[,-c(1,2,6,21,22)]
+
+
+mat = chisqmatrix(crmdf5)
+mat
+View(mat)
+
+#storing chi square test result
+mat <- mat[-c(5:17),-c(1:4)]
+mat <- round(mat, digits = 2)
+CSR <- as.data.frame(as.matrix(mat))
+write.csv(CSR,"Chi Square Results.csv")
+write.csv()
+View(CSR)
+
+LR1 <- crmdf[crmdf$Type %in% '1' & crmdf$Management %in% '3' & crmdf$Autonomous %in% '1',]
+LR2 <- crmdf[crmdf$Type %in% '1' & crmdf$Management %in% '4' & crmdf$Autonomous %in% '1',]
+LR3 <- crmdf[crmdf$Type %in% '1' & crmdf$Management %in% '5' & crmdf$Autonomous %in% '1',]
+
+write.csv(LR1,"LR1.csv", row.names = FALSE)
+write.csv(LR2,"LR2.csv", row.names = FALSE)
+write.csv(LR3,"LR3.csv", row.names = FALSE)
+
+LR1cor <- read.csv("LR1.csv", header = TRUE, sep =",")
+LR2cor <- read.csv("LR2.csv", header = TRUE, sep =",")
+LR3cor <- read.csv("LR3.csv", header = TRUE, sep =",")
+
+
+col123 <- colorRampPalette(c(high = "#FFFFFF", low = "#FF0000", bias = 1))
+corrplot(mat, p.mat = mat, sig.level = 0.05, method = "color", cl.lim = c(0.00,1.00), col = col123(100))
+
 
