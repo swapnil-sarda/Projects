@@ -12,8 +12,8 @@ Description: Deploy an automated warehouse and answer non-trivial queries.
 
 Tools used: SQL, R, Visual studio, Tableau.
 
-### Data Visualisation
+### [Analytical CRM]()
 
-Description: Design a magazine style report.
+Description: To find correlation between variables and find business value.
 
-Tools used for creating visualisations: R, Python, Tableau, Power BI.
+Tools used: Rstudio, SPSS
