@@ -2,11 +2,11 @@
 
 The aim of this project is to analyse data and find business value.
 
+Dataset contains list of college and other details like Administration group, Location, Number of students, Various infrastructure facilities. 
+
 A college has many facets which add to its value. One of the facet is the infrastructure faciliities available in the college. 
 
-College dataset of India is analysed.
-
-This project was implemented in R in two stages.
+This project is implemented in R in two stages.
 
 Chi square test is implemented to find correlation between categorical variables.
 
