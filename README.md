@@ -1,12 +1,12 @@
 ## Project description
 
-###  Predicted PM2.5 pollutant levels for 7 days, for 8 cities of India using Long short-term memory (LSTM) artificial recurrent neural network (RNN) architecture.
+Predicted PM2.5 pollutant levels for 7 days, for 8 cities of India using Long short-term memory (LSTM) artificial recurrent neural network (RNN) architecture.
 
-### Data for this project is collected from National Air Quality Index website.
+Data for this project is collected from National Air Quality Index website.
 
-### Data cleaning process done in R.
+Data cleaning process done in R.
 
-### Machine learning model implementation done in Python.
+Machine learning model implementation done in Python.
 
 The output is evaluated using the RMSE parameter. 
 
