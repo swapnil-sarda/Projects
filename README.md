@@ -4,9 +4,9 @@
 
 ### Data for this project is collected from National Air Quality Index website.
 
-### [Data cleaning process done in R.](https://github.com/swapnil-sarda/projects/blob/Machine-learning/R%20Code)
+### Data cleaning process done in R.
 
-### [Machine learning model implementation done in Python.](https://github.com/swapnil-sarda/projects/blob/Machine-learning/Python%20code)
+### Machine learning model implementation done in Python.
 
 The output is evaluated using the RMSE parameter. 
 
