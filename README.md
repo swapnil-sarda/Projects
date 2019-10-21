@@ -21,5 +21,7 @@ Tools used: Rstudio, SPSS
 ### Data Visualisation
 
 Description: 
-1> Data visualisation report on Car Sales in Ireland
-2> Inforgraphic report on Income vs Expenditure in New York City.
+
+Data visualisation report on Car Sales in Ireland
+
+Inforgraphic on Income vs Expenditure in New York City.
