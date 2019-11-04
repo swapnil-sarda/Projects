@@ -26,4 +26,4 @@ Data visualisation report on Car Sales in Ireland
 
 Inforgraphic on Income vs Expenditure in New York City.
 
-Both files present in the readme section
+Both files present above readme section.
