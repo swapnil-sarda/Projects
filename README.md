@@ -3,6 +3,8 @@
 ## [Thesis project - Frequent pattern finding and visual analytics](https://github.com/swapnil-sarda/projects/tree/Thesis)
 Tools used: R and JavaScript
 
+[Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
+
 Description:
 
 This project is inspired by the limitation of in-game statistics only table which provides a very basic overview of the player summary. 
@@ -16,7 +18,6 @@ Applied Apriori algorithm on the datasets to find hidden patterns of playing sty
 
 Selected the dataset with higher RPF. Interpreted the result with patterns having upto six different attributes.
 
-[Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
 
 ### Custom Visualisation: 
 This visualisation has 5 donuts and a circle, encircling one another and decreasing in size from out to in. 
