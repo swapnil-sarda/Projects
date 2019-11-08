@@ -1,6 +1,6 @@
 # Projects
 
-### [Thesis project - Frequent pattern finding and visual analytics]
+### [Thesis project - Frequent pattern finding and visual analytics](https://github.com/swapnil-sarda/projects/tree/Thesis)
 Tools used: R and JavaScript
 
 Description:
