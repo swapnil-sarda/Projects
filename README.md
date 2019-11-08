@@ -4,6 +4,7 @@
 Tools used: R and JavaScript
 
 Description:
+
 This project is inspired by the limitation of in-game statistics only table which provides a very basic overview of the player summary. 
 Created a custom visualisation which shows more information on how a player plays the game.
 
@@ -42,6 +43,7 @@ The desired slice is rotated in front of the tooltip by clicking on it.
 Tools used:	R, Python, Excel
 
 Description: 
+
 Researched air quality index for eight Tier-1 and Tier-2 Indian cities. Predicted the level of PM2.5 pollutants in the air for a period of seven days. Data mining method LSTM is used for this time series problem.
 Data cleaning on the dataset to have consistent date format and handling of missing values using rolling mean is performed in R.
 LSTM implementation including optimization of model is done using Python. Best performing model has RMSE 3.8 percent.
@@ -52,6 +54,7 @@ LSTM implementation including optimization of model is done using Python. Best p
 Tools used: R, MS SQL Server, Tableau and Visual Studio
 
 Description:
+
 Developed a data warehouse using Visual studio and Microsoft SQL Server. Flat files sources are automated to be downloaded from the internet at the time of deployment of data warehouse.
 A database of tweets is generated using AWS EC2 instance and imported in R to perform sentiment analysis to find brand perception of with respect to electric cars offered by the respective brands.
 BI queries visualised in Tableau.
@@ -62,6 +65,7 @@ BI queries visualised in Tableau.
 Tools used: Rstudio
 
 Description:
+
 Combined different datasets detailing college information.
 Data preprocessing operations performed are, making college name variable consistent across different files and finding and removing outliers of number of students.
 Implemented Chi square test by identifying two groups of variables which described college administration type and number of infrastructure facilities available.
@@ -79,6 +83,7 @@ Description:
 Made a report on car sales in Ireland which involved using various tools like R, Python, Tableau, PowerBI, Microsoft excel to choose appropriate visualisations.
 
 Created an inforgraphic on the topic of 'Income of $100,000 in New York city' showing tax deductions percent, rent for studio apartments across all the boroughs, daily expenditures and monthly and yearly savings.
+
 [Infographic link](https://ibb.co/prMBjdN)
 
-Documents present in the 'Files' section above.
+Report present in the 'Files' section above.
