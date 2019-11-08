@@ -88,5 +88,7 @@ Tools used: R, MS SQL Server, Tableau and Visual Studio
 Description:
 
 Developed a data warehouse using Visual studio and Microsoft SQL Server. Flat files sources are automated to be downloaded from the internet at the time of deployment of data warehouse.
+
 A database of tweets is generated using AWS EC2 instance and imported in R to perform sentiment analysis to find brand perception of with respect to electric cars offered by the respective brands.
+
 BI queries visualised in Tableau.
