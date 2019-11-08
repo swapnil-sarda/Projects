@@ -1,6 +1,6 @@
 # Projects
 
-### [Thesis project - Frequent pattern finding and visual analytics](https://github.com/swapnil-sarda/projects/tree/Thesis)
+## [Thesis project - Frequent pattern finding and visual analytics](https://github.com/swapnil-sarda/projects/tree/Thesis)
 Tools used: R and JavaScript
 
 Description:
@@ -18,7 +18,7 @@ Selected the dataset with higher RPF. Interpreted the result with patterns havin
 
 [Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
 
-# Custom Visualisation: 
+### Custom Visualisation: 
 This visualisation has 5 donuts and a circle, circling one another and decreasing in size from out to in. 
 
 Darker the colour, highly frequent pattern (or set of patterns).
@@ -37,7 +37,7 @@ Similarly other options will keep desired visual on the front hiding others.
 The desired slice is rotated in front of the tooltip by clicking on it.
 
 
-### [Analysis of air quality index and prediction of PM2.5 pollutant level](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
+## [Analysis of air quality index and prediction of PM2.5 pollutant level](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
 
 Tools used:	R, Python, Excel
 
@@ -48,7 +48,7 @@ Data cleaning on the dataset to have consistent date format and handling of miss
 LSTM implementation including optimization of model is done using Python. Best performing model has RMSE 3.8 percent.
 
 
-### [Data Warehouse](https://github.com/swapnil-sarda/projects/tree/Data-warehouse)
+## [Data Warehouse](https://github.com/swapnil-sarda/projects/tree/Data-warehouse)
 
 Tools used: R, MS SQL Server, Tableau and Visual Studio
 
@@ -59,7 +59,7 @@ A database of tweets is generated using AWS EC2 instance and imported in R to pe
 BI queries visualised in Tableau.
 
 
-### [Analytical CRM](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
+## [Analytical CRM](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
 
 Tools used: Rstudio
 
@@ -74,7 +74,7 @@ From the output, deduced that there is positive correlation between number of st
 Almost non existent correlation is found in Urban areas for the same set of variables as above.
 
 
-### Data Visualisation
+## Data Visualisation
 
 Tools used: R, Python, Tableau, PowerBI, Microsoft Excel and Infogram(online tool to create infographs).
 
