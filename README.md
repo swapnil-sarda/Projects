@@ -16,7 +16,9 @@ Applied Apriori algorithm on the datasets to find hidden patterns of playing sty
 
 Selected the dataset with higher RPF. Interpreted the result with patterns having upto six different attributes.
 
-#Custom Visualisation: 
+[Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
+
+# Custom Visualisation: 
 This visualisation has 5 donuts and a circle, circling one another and decreasing in size from out to in. 
 
 Darker the colour, highly frequent pattern (or set of patterns).
@@ -33,9 +35,6 @@ Clicking on 'Subset 1' will only display visualisation which has one frequent pa
 Similarly other options will keep desired visual on the front hiding others.
 
 The desired slice is rotated in front of the tooltip by clicking on it.
-
-[Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
-
 
 
 ### [Analysis of air quality index and prediction of PM2.5 pollutant level](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
@@ -86,4 +85,4 @@ Created an inforgraphic on the topic of 'Income of $100,000 in New York city' sh
 
 [Infographic link](https://ibb.co/prMBjdN)
 
-Report present in the 'Files' section above.
+Viusalisation report present in the 'Files' section above.
