@@ -77,7 +77,7 @@ From the output, deduced that there is positive correlation between number of st
 Almost non existent correlation is found in Urban areas for the same set of variables as above.
 
 
-## [Data Warehouse]
+## Data Warehouse
 
 Tools used: R, MS SQL Server, Tableau and Visual Studio
 
