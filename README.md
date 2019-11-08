@@ -1,29 +1,46 @@
 # Projects
 
-### [Machine learning](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
+### [Analysis of air quality index and prediction of PM2.5 pollutant level](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
 
-Description: Predicting and comparing air pollution factor PM2.5 for 7 days and 8 different cities of India using LSTM.
+Tools used:	R, Python, Excel
 
-Tools Used: R, Python, Tableau, Excel.
+Description: 
+Researched air quality index for eight Tier-1 and Tier-2 Indian cities. Predicted the level of PM2.5 pollutants in the air for a period of seven days. Data mining method LSTM is used for this time series problem.
+Data cleaning on the dataset to have consistent date format and handling of missing values using rolling mean is performed in R.
+LSTM implementation including optimization of model is done using Python. Best performing model has RMSE 3.8 percent.
+
 
 ### [Data Warehouse](https://github.com/swapnil-sarda/projects/tree/Data-warehouse)
 
-Description: Deploy an automated warehouse and answer non-trivial queries.
+Tools used: R, MS SQL, Tableau, Visual Studio
 
-Tools used: SQL, R, Visual studio, Tableau.
+Description:
+Developed a data warehouse using Visual studio and Microsoft SQL Server. Flat files sources are automated to be downloaded from the internet at the time of deployment of data warehouse.
+A database of tweets is generated using AWS EC2 instance and imported in R to perform sentiment analysis to find brand perception of with respect to electric cars offered by the respective brands.
+BI queries visualised in Tableau.
+
 
 ### [Analytical CRM](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
 
-Description: To find correlation between variables and find business value.
+Tools used: Rstudio
 
-Tools used: Rstudio, SPSS
+Description:
+Combined different datasets detailing college information.
+Data preprocessing operations performed are, making college name variable consistent across different files and finding and removing outliers of number of students.
+Implemented Chi square test by identifying two groups of variables which described college administration type and number of infrastructure facilities available.
+Interpreted the outcome of the test by visualising the chi square matrix. Altered the dataset on this outcome.
+Linear regression test performed to find correlation among variables.
+From the output, deduced that there is positive correlation between number of students in a college and number of infrastructure facilities provided in rural areas in India.
+Almost non existent correlation is found in Urban areas for the same set of variables as above.
+
 
 ### Data Visualisation
 
+Tools used: R, Python, Tableau, PowerBI, Microsoft Excel, Infogram(Online tool to create infographs).
+
 Description: 
+Made a report on car sales in Ireland which involved using various tools like R, Python, Tableau, PowerBI, Microsoft excel to choose appropriate visualisations.
 
-Data visualisation report on Car Sales in Ireland
+Created an inforgraphic on the topic of Income $100,000 in New York city, tax deductions, rent, daily expenditures and monthly and yearly savings.
 
-Inforgraphic on Income vs Expenditure in New York City.
-
-Both files present above readme section.
+Documents present in the 'Files' section above.
