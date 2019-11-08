@@ -85,4 +85,4 @@ Created an inforgraphic on the topic of 'Income of $100,000 in New York city' sh
 
 [Infographic link](https://ibb.co/prMBjdN)
 
-Viusalisation report present in the 'Files' section above.
+Visualisation report present in the 'Files' section above.
