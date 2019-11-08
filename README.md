@@ -79,5 +79,6 @@ Description:
 Made a report on car sales in Ireland which involved using various tools like R, Python, Tableau, PowerBI, Microsoft excel to choose appropriate visualisations.
 
 Created an inforgraphic on the topic of 'Income of $100,000 in New York city' showing tax deductions percent, rent for studio apartments across all the boroughs, daily expenditures and monthly and yearly savings.
+[Infographic link](https://ibb.co/prMBjdN)
 
 Documents present in the 'Files' section above.
