@@ -37,6 +37,20 @@ Similarly other options will keep desired visual on the front hiding others.
 The desired slice is rotated in front of the tooltip by clicking on it.
 
 
+## Data Visualisation
+
+Tools used: R, Python, Tableau, PowerBI, Microsoft Excel and Infogram(online tool to create infographs).
+
+Description: 
+Made a report on car sales in Ireland which involved using various tools like R, Python, Tableau, PowerBI, Microsoft excel to choose appropriate visualisations.
+
+Created an inforgraphic on the topic of 'Income of $100,000 in New York city' showing tax deductions percent, rent for studio apartments across all the boroughs, daily expenditures and monthly and yearly savings.
+
+[Infographic link](https://ibb.co/prMBjdN)
+
+Visualisation report present in the 'Files' section above.
+
+
 ## [Analysis of air quality index and prediction of PM2.5 pollutant level](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
 
 Tools used:	R, Python, Excel
@@ -46,17 +60,6 @@ Description:
 Researched air quality index for eight Tier-1 and Tier-2 Indian cities. Predicted the level of PM2.5 pollutants in the air for a period of seven days. Data mining method LSTM is used for this time series problem.
 Data cleaning on the dataset to have consistent date format and handling of missing values using rolling mean is performed in R.
 LSTM implementation including optimization of model is done using Python. Best performing model has RMSE 3.8 percent.
-
-
-## [Data Warehouse](https://github.com/swapnil-sarda/projects/tree/Data-warehouse)
-
-Tools used: R, MS SQL Server, Tableau and Visual Studio
-
-Description:
-
-Developed a data warehouse using Visual studio and Microsoft SQL Server. Flat files sources are automated to be downloaded from the internet at the time of deployment of data warehouse.
-A database of tweets is generated using AWS EC2 instance and imported in R to perform sentiment analysis to find brand perception of with respect to electric cars offered by the respective brands.
-BI queries visualised in Tableau.
 
 
 ## [Analytical CRM](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
@@ -74,15 +77,12 @@ From the output, deduced that there is positive correlation between number of st
 Almost non existent correlation is found in Urban areas for the same set of variables as above.
 
 
-## Data Visualisation
+## [Data Warehouse]
 
-Tools used: R, Python, Tableau, PowerBI, Microsoft Excel and Infogram(online tool to create infographs).
+Tools used: R, MS SQL Server, Tableau and Visual Studio
 
-Description: 
-Made a report on car sales in Ireland which involved using various tools like R, Python, Tableau, PowerBI, Microsoft excel to choose appropriate visualisations.
+Description:
 
-Created an inforgraphic on the topic of 'Income of $100,000 in New York city' showing tax deductions percent, rent for studio apartments across all the boroughs, daily expenditures and monthly and yearly savings.
-
-[Infographic link](https://ibb.co/prMBjdN)
-
-Visualisation report present in the 'Files' section above.
+Developed a data warehouse using Visual studio and Microsoft SQL Server. Flat files sources are automated to be downloaded from the internet at the time of deployment of data warehouse.
+A database of tweets is generated using AWS EC2 instance and imported in R to perform sentiment analysis to find brand perception of with respect to electric cars offered by the respective brands.
+BI queries visualised in Tableau.
