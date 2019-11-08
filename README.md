@@ -19,7 +19,7 @@ Selected the dataset with higher RPF. Interpreted the result with patterns havin
 [Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
 
 ### Custom Visualisation: 
-This visualisation has 5 donuts and a circle, circling one another and decreasing in size from out to in. 
+This visualisation has 5 donuts and a circle, encircling one another and decreasing in size from out to in. 
 
 Darker the colour, highly frequent pattern (or set of patterns).
 
