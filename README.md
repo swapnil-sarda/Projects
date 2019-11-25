@@ -1,6 +1,6 @@
 # Projects
 
-## [Thesis project - Frequent pattern mining and data visualisation](https://github.com/swapnil-sarda/projects/tree/Thesis)
+## [Frequent pattern mining and data visualisation](https://github.com/swapnil-sarda/projects/tree/Thesis)
 Tools used: R and JavaScript
 
 [Live demo of the visualisation on codepen](https://codepen.io/swapnil-sarda/pen/JjjvZwz)
