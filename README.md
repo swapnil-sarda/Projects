@@ -53,7 +53,7 @@ Created an inforgraphic on the topic of 'Income of $100,000 in New York city' sh
 Visualisation report present in the 'Files' section above.
 
 
-## [Analysis of air quality index and prediction of PM2.5 pollutant level](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
+## [Predictive analytics](https://github.com/swapnil-sarda/projects/tree/Machine-learning)
 
 Tools used:	R, Python, Excel
 
@@ -65,7 +65,7 @@ Data cleaning on the dataset to have consistent date format and handling of miss
 LSTM implementation including optimization of model is done using Python. Best performing model has RMSE 3.8 percent.
 
 
-## [Analytical CRM](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
+## [Customer Relationship Analysis](https://github.com/swapnil-sarda/projects/tree/Analytical-CRM)
 
 Tools used: Rstudio
 
