@@ -7,4 +7,6 @@ To achieve this we need to enable OAUTH for the email to send the reports.
 
 I have setup a gmail account and used the GMAIL API to send reports via email. One click distribution is a shiny library feature.
 
-Dataset "World Happiness Index" is taken from Kaggle, which details various parameters and world ranking of the countries. Visualisations are made for this report.
+Dataset "World Happiness Index" is taken from Kaggle, which details various parameters which contributes to happiness and world ranking of the countries.
+
+A very basic layout is attached.
