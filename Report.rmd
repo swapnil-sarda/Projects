@@ -1,0 +1,73 @@
+---
+title: "Automate"
+author: "Swapnil"
+date: "`r lubridate::now()`"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, results = 'hide',warning = FALSE)
+```
+
+<!-- Loading libraries -->
+
+```{r libraries}
+library(ggplot2)
+library(rworldmap)
+library(RColorBrewer)
+library(gridExtra)
+library(rmarkdown)
+library(shiny)
+library(gmailr)
+library(tidyverse)
+library(fs)
+library(lubridate)
+```
+<!-- Making visualisations -->
+
+# Birdeye View of Happiest Countries in the World
+```{r plots}
+H_index <- read.csv('/Path/to/your/file.csv')
+H_index$Country.Code<-countrycode::countrycode(H_index$Country.or.region, origin = "country.name", destination = "iso3c")
+
+
+mapped_data <- joinCountryData2Map(H_index, joinCode = "ISO3",
+                                   nameJoinColumn = "Country.Code")
+
+WHI <-RColorBrewer::brewer.pal(7, "Paired")
+
+par(mai=c(0,0,0.2,0),xaxs="i",yaxs="i")
+mapCountryData(mapped_data, nameColumnToPlot = "Overall.rank", colourPalette = WHI, addLegend = 'TRUE',
+               borderCol = "black", mapTitle = "World Happiness Index - Ranked Highest to Lowest")
+
+hpy<-H_index
+
+hpy <- within(hpy,rm("Country.Code"))
+
+hpy <- head(hpy, 10)
+
+p <- ggplot(data = hpy, aes(y = Overall.rank, x = Country.or.region, fill = Country.or.region)) +
+  xlab("Country") + ylab("Rank") + ggtitle("Top 10 Happiest Countries") +
+  geom_bar(position = "dodge", stat = "identity", show.legend = FALSE) + 
+  geom_text(aes(label=Overall.rank), hjust = 2, vjust = 1, color = 'black', size = 3.5) + 
+  coord_flip() 
+              
+p + scale_fill_brewer(palette = "Spectral")
+
+p2 <- ggplot(data = hpy, aes(y = GDP.per.capita, x = Country.or.region, fill = Country.or.region)) +
+  xlab("Country") + ylab("") + ggtitle("GDP Per Capita of top 10 ranked countries") +
+  geom_bar(position = "dodge", stat = "identity", show.legend = FALSE) + 
+  geom_text(aes(label=GDP.per.capita), hjust = 2, vjust = 1, color = 'black', size = 3.5) + 
+  coord_flip() 
+
+p2 + scale_fill_brewer(palette = "Spectral")
+
+p3 <- ggplot(data = hpy, aes(y = Healthy.life.expectancy, x = Country.or.region, fill = Country.or.region)) +
+  xlab("Country") + ylab("") + ggtitle("Life Expectancy of top 10 ranked countries") +
+  geom_bar(position = "dodge", stat = "identity", show.legend = FALSE) + 
+  geom_text(aes(label=Healthy.life.expectancy), hjust = 2, vjust = 1, color = 'black', size = 3.5) + 
+  coord_flip() 
+
+p3 + scale_fill_brewer(palette = "Spectral")
+```
