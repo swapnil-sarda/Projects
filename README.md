@@ -38,6 +38,14 @@ Similarly other options will keep desired visual on the front hiding others.
 The desired slice is rotated in front of the tooltip by clicking on it.
 
 
+## [Data visualisation and Shiny element embedded in R Markdown.](https://github.com/swapnil-sarda/Projects/tree/Report-Automation)
+
+Tools used: R (R markdown and Shiny)
+
+The purpose of this script is to automate:
+Data wrangling, data visualisation and publishing a report which can be send via email to intended users on a single click.
+
+
 ## Data Visualisation
 
 Tools used: R, Python, Tableau, PowerBI, Microsoft Excel and Infogram(online tool to create infographs).
