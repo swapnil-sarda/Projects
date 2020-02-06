@@ -7,7 +7,7 @@ library(lubridate)
 
 
 # Email Parameters ---
-to <- "swapnil.sarda@outlook.com"
+to <- "reciever email id"
 subject <- "Automated report"
 body <- str_glue("
   Hello Swapnil,
@@ -35,18 +35,18 @@ render(
 gm_auth_configure(path = "filename.json")
 
 #Account through which email needs to be sent.
-gm_auth(email = "email account")
+gm_auth(email = "sender email id")
 
 #Email details
 email <- gm_mime()%>%
-  gm_to("reciever")%>%
-  gm_from("email through which email needs to be sent")%>%
+  gm_to("reciever email id")%>%
+  gm_from("sender email id")%>%
   gm_subject(" ")%>%
   gm_text_body(" ")%>%
-  gm_attach_file(str_c("Home/",file_path)) #File location
+  gm_attach_file(str_c("Home/",file_path)) #Location of  file to be attached
 
 
-#Single click report sending option.
+#Button to send report
 shinyApp( 
   
   ui <- fluidPage(
